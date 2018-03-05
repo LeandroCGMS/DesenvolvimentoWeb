@@ -50,13 +50,17 @@
 		<!-- PARTE DO EXERCÍCIO OPCIONAL DESENVOLVIDO POR MIM observação: comentarei as linhas de inserção
 		do PHP-->
 		<script type="text/javascript">
-			$.ajax({
-				type: 'post',
-				url: "script_contador_tweets_seguidores.php",
-				//data: ,
-			}).done(function(data){
-				console.log(data);
+			$(document).ready(function (){
 
+				$.ajax({
+					type: 'post',
+					url: "script_contador_tweets_seguidores.php",
+					//data: ,
+				}).done(function(data){
+					console.log(data);
+
+
+				});
 
 			});
 		
