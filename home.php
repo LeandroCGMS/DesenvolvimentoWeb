@@ -53,7 +53,7 @@
 			$.ajax({
 				type: 'post',
 				url: "script_contador_tweets_seguidores.php",
-				data: ,
+				//data: ,
 			}).done(function(data){
 				console.log(data);
 
