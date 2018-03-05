@@ -32,4 +32,7 @@
 		echo 'Erro ao executar a query.';
 	}
 
+	$retorno = array($qtde_tweets, $qtde_seguidores);
+	echo json_encode($retorno);
+
 ?>
