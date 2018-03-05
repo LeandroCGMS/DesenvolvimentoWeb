@@ -57,7 +57,10 @@
 					url: "script_contador_tweets_seguidores.php",
 					//data: ,
 				}).done(function(data){
-					console.log(data);
+					//console.log(data);
+					var resultado = JSON.parse(result);
+					$("#qtd_tweets").text(resultado[0]);
+					$("#qtd_seguidores").text(resultado[1]);
 
 
 				});
