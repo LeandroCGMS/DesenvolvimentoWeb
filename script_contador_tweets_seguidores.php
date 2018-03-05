@@ -1,6 +1,10 @@
-<?php>
+<?php
+	session_start();
+
+    if(!isset($_SESSION['usuario'])){
+        header('Location: index.php?erro=1');
+	}
     require_once('db.class.php');
-	
 
 	$objDb = new db();
 	$link = $objDb->conecta_mysql();
@@ -26,5 +30,6 @@
 		$qtde_seguidores = $registro['qtde_seguidores'];
 	} else {
 		echo 'Erro ao executar a query.';
-    }
+	}
+
 ?>
