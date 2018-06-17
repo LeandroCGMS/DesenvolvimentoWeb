@@ -7,7 +7,7 @@
 </head>
 <body>
 <div>
-    
+
     <form method="post" action="pagina_quina.php">
       Escolha a quantidade de Quinas Zero Primo quer gerar de 1 a 10.
         <select name="opcao">
@@ -27,23 +27,24 @@
         <?php
         require_once 'Quina.php';
         $qtd = isset($_POST["opcao"]) ? $_POST["opcao"] : 1;
-        echo "<h3>";
+        echo "<h1>";
         for($i = 0; $i < $qtd; $i++) {
+          echo "{ ";
           $quina = new Quina;
-          $quina->gerarQuina();
-          
+          echo " }";
+          echo "<br/><br/>";
         }
-        echo "</h3>";
-        echo "<br/><br/>";
+        echo "</h1>";
+
 
         unset($_POST['']);
         $qtd = 0;
 
 
         ?>
-        
+
         <br><br><br><a href="index.php" class="botao" style='text-align: center;'>Voltar</a>
 </div>
-    
+
 </body>
 </html>
