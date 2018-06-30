@@ -27,3 +27,6 @@ textarea {
   width: 400px;
   height: 250px;
 }
+div#oculta{
+  display: none;
+}
