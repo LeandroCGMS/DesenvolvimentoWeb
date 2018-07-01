@@ -10,3 +10,7 @@ table tr td {
 .impar {
     background-color: #CCC;
 }
+div#msg {
+    margin-left: 30%;
+    margin-top: 5%;
+}
