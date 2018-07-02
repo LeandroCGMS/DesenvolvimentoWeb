@@ -10,6 +10,10 @@ table tr td {
 .impar {
     background-color: #CCC;
 }
+.destaque {
+    background-color: #000;
+    color: #fff;
+}
 div#msg {
     margin-left: 30%;
     margin-top: 5%;
