@@ -27,3 +27,10 @@ div .tooltip {
     background: #DDD;
     position: absolute;
 }
+.sub {
+    text-align: left;
+    background-color: #CCC;
+    font-weight: bold;
+    color: black;
+    border: 2px solid black;
+}
