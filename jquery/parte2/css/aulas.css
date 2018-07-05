@@ -34,3 +34,7 @@ div .tooltip {
     color: black;
     border: 2px solid black;
 }
+textarea#aula09 {
+    width: 400px;
+    height: 100px;
+}
