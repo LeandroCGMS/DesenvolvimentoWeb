@@ -1,0 +1,10 @@
+#tela {
+    height: 800px;
+    width: 800px;
+    margin-top: calc((100vh+400px) / 4);
+    margin-left: calc((100vw - 400px) / 2);
+}
+
+#btnVerificar {
+    float: right;
+}
