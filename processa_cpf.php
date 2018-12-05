@@ -1,6 +1,31 @@
 <?php
             if(isset($_POST['cpf'])) {
                 $cpf = preg_replace("/[^\d]/","",$_POST['cpf']); // String => 01054145148
+                if(verificarCPF($cpf)){
+                    echo "<h1 class='bg-success'>O CPF É VÁLIDO.</h1>";
+                } else {
+                    echo "<h1 class='bg-danger'>O CPF É INVÁLIDO.</h1>";
+                }
+            }
+
+            function verificarCPF($cpf){
+                $sequencia0 = "00000000000";
+                $sequencia1 = "11111111111";
+                $sequencia2 = "22222222222";
+                $sequencia3 = "33333333333";
+                $sequencia4 = "44444444444";
+                $sequencia5 = "55555555555";
+                $sequencia6 = "66666666666";
+                $sequencia7 = "77777777777";
+                $sequencia8 = "88888888888";
+                $sequencia9 = "99999999999";
+                if($cpf == $sequencia0 || $cpf == $sequencia1 || $cpf == $sequencia2 ||
+                $cpf == $sequencia3 || $cpf == $sequencia4 || $cpf == $sequencia5 ||
+                $cpf == $sequencia6 || $cpf == $sequencia7 || $cpf == $sequencia8 ||
+                $cpf == $sequencia9){
+                    echo "Sequência de números iguais.";
+                    return false;
+                }
                 $pos0 = substr($cpf, 0, -10);
                 $pos1 = substr($cpf, 1, -9);
                 $pos2 = substr($cpf, 2, -8);
@@ -25,9 +50,9 @@
                 $resto = $multiplicacao2 % 11;
                 $digito2 = $resto;
                 if($digito1 == $pos9 && $digito2 == $pos10){
-                    echo "<h1 class='bg-info'>O CPF É VÁLIDO.</h1>";
+                    return true;
                 } else {
-                    echo "<h1 class='bg-danger'>O CPF É INVÁLIDO.</h1>";
+                    return false;
                 }
             }
         ?>

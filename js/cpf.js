@@ -12,6 +12,7 @@ $(document).ready(function(){
             data: {cpf: dados},
             success: function(msg){
                 $("#tela h1").remove();
+                $("#tela p").remove();
                 $("#tela").append("<p>" + msg + "</p>");
             },error: function(erro){
                 $("#tela h1").remove();
