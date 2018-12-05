@@ -9,22 +9,14 @@
             }
 
             function verificarCPF($cpf){
-                $sequencia0 = "00000000000";
-                $sequencia1 = "11111111111";
-                $sequencia2 = "22222222222";
-                $sequencia3 = "33333333333";
-                $sequencia4 = "44444444444";
-                $sequencia5 = "55555555555";
-                $sequencia6 = "66666666666";
-                $sequencia7 = "77777777777";
-                $sequencia8 = "88888888888";
-                $sequencia9 = "99999999999";
-                if($cpf == $sequencia0 || $cpf == $sequencia1 || $cpf == $sequencia2 ||
-                $cpf == $sequencia3 || $cpf == $sequencia4 || $cpf == $sequencia5 ||
-                $cpf == $sequencia6 || $cpf == $sequencia7 || $cpf == $sequencia8 ||
-                $cpf == $sequencia9){
-                    echo "Sequência de números iguais.";
-                    return false;
+                $sequencia = array("00000000000", "11111111111", "22222222222", "33333333333",
+                "44444444444", "55555555555", "66666666666", "77777777777", "88888888888",
+                "99999999999");
+                for($i = 0; $i < 10; $i++){
+                    if($sequencia[$i] == $cpf){
+                        echo "Sequência de números iguais não é aceita em CPF.";
+                        return false;
+                    }
                 }
                 $pos0 = substr($cpf, 0, -10);
                 $pos1 = substr($cpf, 1, -9);
