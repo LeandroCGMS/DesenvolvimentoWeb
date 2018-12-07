@@ -16,6 +16,7 @@ $(document).ready(function(){
                 $("#tela").append("<p>" + msg + "</p>");
             },error: function(erro){
                 $("#tela h1").remove();
+                $("#tela p").remove();
                 $("#tela").append("<p>" + erro + "</p>");
             }
         });
