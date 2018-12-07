@@ -9,10 +9,23 @@
     <?php
         require('config.php');
         require('connection.php');
+        require('database.php');
 
-        $link = DBConnect();
+        /*$link = DBConnect();
 
-        DBClose($link);
+        DBClose($link);*/
+        $nome = "'Lucas 'Pires";
+        $dados = [
+            'nome' => "Lucas '''Pi''res",
+            'idade' => 18
+        ];
+        /*$nome = DBEscape($nome);
+        $dados = DBEscape($dados);
+        echo $nome,"<br>";
+        var_dump($dados) ;*/
+
+        $query =  "INSERT INTO clientes ( nome, email, idade, `status` ) VALUES ( 'Lucas Pires', 'leandrocgms2015@gmail.com', 18, 123 );";
+        var_dump(DBExecute($query));
     ?>
 </body>
 </html>
