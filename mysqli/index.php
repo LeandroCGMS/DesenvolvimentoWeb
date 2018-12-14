@@ -23,7 +23,7 @@
         $dados = DBEscape($dados);
         echo $nome,"<br>";
         var_dump($dados) ;*/
-
+        /*
         $query =  "INSERT INTO clientes ( nome, email, idade, `status` ) 
         VALUES ( 'Leandro Santos', 'meuemail@gmail.com', 32, 123 );";
         if(DBExecute($query)){
@@ -31,6 +31,22 @@
         } else {
             echo "<h1>Falha ao Inserir registro.";
         }
+        */
+        $cliente = array(
+            'nome' => 'Lucas Pires',
+            'email' => 'contato@coderweb.com.br',
+            'idade' => 18,
+            'status' => 1
+        );
+
+        $grava = DBCreate('clientes', $cliente);
+        
+        if($grava) 
+            echo 'OK';
+        else
+            echo ':/';
+
+
     ?>
 </body>
 </html>
