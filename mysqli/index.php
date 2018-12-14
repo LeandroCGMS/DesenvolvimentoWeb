@@ -24,8 +24,13 @@
         echo $nome,"<br>";
         var_dump($dados) ;*/
 
-        $query =  "INSERT INTO clientes ( nome, email, idade, `status` ) VALUES ( 'Lucas Pires', 'leandrocgms2015@gmail.com', 18, 123 );";
-        var_dump(DBExecute($query));
+        $query =  "INSERT INTO clientes ( nome, email, idade, `status` ) 
+        VALUES ( 'Leandro Santos', 'meuemail@gmail.com', 32, 123 );";
+        if(DBExecute($query)){
+            echo "<h1>Registro Inserido com Sucesso.";
+        } else {
+            echo "<h1>Falha ao Inserir registro.";
+        }
     ?>
 </body>
 </html>
