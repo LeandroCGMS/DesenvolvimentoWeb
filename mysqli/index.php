@@ -32,6 +32,7 @@
             echo "<h1>Falha ao Inserir registro.";
         }
         */
+        /*
         $cliente = array(
             'nome' => 'Lucas Pires',
             'email' => 'contato@coderweb.com.br',
@@ -45,7 +46,9 @@
             echo 'OK';
         else
             echo ':/';
-
+        */
+        $clientes = DBRead('clientes', "WHERE status = 123", 'nome, email');
+        var_dump($clientes);
 
     ?>
 </body>
