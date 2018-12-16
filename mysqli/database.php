@@ -1,5 +1,18 @@
 <?php
 
+    // Altera Registros
+    function DBUpDate($table, array $data, $where = null){
+        foreach($data as $key => $value){
+            $fields[] = "{$key} = '{$value}'";
+        }
+        $fields = implode(', ', $fields);
+        //var_dump($fields);
+        $table = DB_PREFIX.'_'.$table;
+        $where = ($where) ? "WHERE $where" : null;
+        $query = "update $table set $fields $where";
+        return DBExecute($query) ;
+    }
+
     // Ler Registros
     function DBRead($table, $params = null, $fields = '*') {
         $table = DB_PREFIX.'_'.$table;

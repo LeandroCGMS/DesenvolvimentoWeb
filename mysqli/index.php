@@ -50,7 +50,7 @@
         */
         /*$clientes = DBRead('clientes', "WHERE status = 123", 'nome, email');
         var_dump($clientes);*/
-        $pesquisa = 'Lucas';
+        /*$pesquisa = 'Lucas';
         $palavra2 = 'Leandro';
         $clientes = DBRead('clientes',"order by id", 'nome, email, idade');
         //var_dump($clientes);
@@ -59,7 +59,14 @@
             echo "<b>Nome: </b>".$cliente['nome']."<b>; E-mail: </b>"
             .$cliente['email']."<b>; Idade: </b>".$cliente['idade']."<hr>";
         }
-        echo "</div>";
+        echo "</div>";*/
+        $cliente = array(
+            'status' => 1,
+            'idade' => 20
+        );
+        var_dump(DBUpDate('clientes', $cliente, 'id = 1'));
+
+
         echo "</pre>";
     ?>
 </body>
