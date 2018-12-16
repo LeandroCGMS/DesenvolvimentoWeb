@@ -7,10 +7,11 @@
 </head>
 <body>
     <?php
+    echo "<pre>";
         require('config.php');
         require('connection.php');
         require('database.php');
-
+        
         /*$link = DBConnect();
 
         DBClose($link);*/
@@ -47,9 +48,19 @@
         else
             echo ':/';
         */
-        $clientes = DBRead('clientes', "WHERE status = 123", 'nome, email');
-        var_dump($clientes);
-
+        /*$clientes = DBRead('clientes', "WHERE status = 123", 'nome, email');
+        var_dump($clientes);*/
+        $pesquisa = 'Lucas';
+        $palavra2 = 'Leandro';
+        $clientes = DBRead('clientes',"order by id", 'nome, email, idade');
+        //var_dump($clientes);
+        echo "<div class='container'>";
+        foreach($clientes as $cliente){
+            echo "<b>Nome: </b>".$cliente['nome']."<b>; E-mail: </b>"
+            .$cliente['email']."<b>; Idade: </b>".$cliente['idade']."<hr>";
+        }
+        echo "</div>";
+        echo "</pre>";
     ?>
 </body>
 </html>

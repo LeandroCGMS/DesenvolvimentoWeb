@@ -7,6 +7,7 @@
             $query = "SELECT $fields FROM $table";
         else
             $query = "SELECT $fields FROM $table $params";
+            echo $query."<br><br>";
         //$query = DBEscape($query);
         $result = DBExecute($query);
         //return $query;
