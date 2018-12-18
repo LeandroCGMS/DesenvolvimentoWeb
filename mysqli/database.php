@@ -1,16 +1,7 @@
 <?php
 
-    // Deleta Registros
-    function DBDelete($table, $where = null) {
-        $table = DB_PREFIX.'_'.$table;
-        $where = ($where) ? "WHERE $where" : null;
-        $query = "DELETE FROM $table $where";
-        //var_dump($query);
-        return DBExecute($query);
-    }
-
     // Altera Registros
-    function DBUpDate($table, array $data, $where = null, $insertId = false){
+    function DBUpDate($table, array $data, $where = null){
         foreach($data as $key => $value){
             $fields[] = "{$key} = '{$value}'";
         }
@@ -19,7 +10,7 @@
         $table = DB_PREFIX.'_'.$table;
         $where = ($where) ? "WHERE $where" : null;
         $query = "update $table set $fields $where";
-        return DBExecute($query, $insertId) ;
+        return DBExecute($query) ;
     }
 
     // Ler Registros
@@ -44,7 +35,7 @@
 
 
     // Grava Registros
-    function DBCreate($table, array $data, $insertId = false){
+    function DBCreate($table, array $data){
         $table = DB_PREFIX.'_'.$table;
         $data = DBEscape($data);
 
@@ -52,14 +43,12 @@
         $values = "'".implode("', '", $data)."'";
 
         $query = "INSERT INTO $table ( $fields ) VALUES ( $values ) ";
-        return DBExecute($query, $insertId);
+        return DBExecute($query);
     }
     // Executa Queries
-    function DBExecute($query, $insertId = false){
+    function DBExecute($query){
         $link = DBConnect();
         $result = mysqli_query($link, $query) or die(mysqli_error($link));
-        if($insertId)
-            $result = mysqli_insert_id($link);
         DBClose($link);
         return $result;
     }

@@ -60,31 +60,12 @@
             .$cliente['email']."<b>; Idade: </b>".$cliente['idade']."<hr>";
         }
         echo "</div>";*/
-        /*
         $cliente = array(
             'status' => 1,
             'idade' => 20
         );
         var_dump(DBUpDate('clientes', $cliente, 'id = 1'));
-        */
-        /*
-        $dropCliente = DBdelete('clientes', 'id = 7');
-        if($dropCliente)
-            echo 'OK';
-        else
-            echo 'NO';
-        */
-        $cliente = array(
-            'nome' => 'Fulano',
-            'email' => 'contato@coderweb.com.br',
-            'idade' => '27',
-            'status' => '0'
-        );
 
-        if(DBCreate('clientes', $cliente, true))
-            echo 'OK';
-        else
-            echo ':/';
 
         echo "</pre>";
     ?>
