@@ -13,6 +13,7 @@ export class DataBindingComponent implements OnInit {
   valorAtual = '';
   valorSalvo;
   isMouseOver = false;
+  nomeDoCurso: string = 'Angular';
   nome = 'abc';
   pessoa: any = {
     nome: 'def',
