@@ -20,4 +20,4 @@ Quase pronto, agora é só colocar para inicializar junto com o sistema:
 É isso aí galera, felicidade a todos! 
 
 
-Em https://www.vivaolinux.com.br/dica/Colocando-script-na-inicializacao-do-Linux-(Ubuntu-Debian)
+Em https://www.vivaolinux.com.br/dica/Colocando-script-na-inicializacao-do-Linux-(Ubuntu-Debian) e https://stackoverflow.com/questions/34662574/node-js-getting-error-nodemon-internal-watch-failed-watch-enospc
