@@ -1,4 +1,5 @@
-No Linux, quando o ng serve não detectar as alterações do código, devemos criar um script de inicialização com o seguinte comando, echo fs.inotify.max_user_watches=582222 | sudo tee -a /etc/sysctl.conf && sudo sysctl -p
+No Linux, quando o ng serve ou qualquer outro programa que precisa escutar alterações em um ou mais arquivos
+, não detectar as alterações do código, devemos criar um script de inicialização com o seguinte comando, echo fs.inotify.max_user_watches=582222 | sudo tee -a /etc/sysctl.conf && sudo sysctl -p
 echo fs.inotify.max_user_watches=582222 | sudo tee -a /etc/sysctl.conf && sudo sysctl -p
 Isso é mostrado no Viva Linux:
 Porém o Ubuntu e Debian não tem esse arquivo, então como fazer??? Muito simples. Basta você criar seu script dentro da pasta /etc/init.d. Exemplo:
