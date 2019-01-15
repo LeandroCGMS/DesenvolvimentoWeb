@@ -38,7 +38,6 @@
               $this->resultadoArray[$i] = rand(1,80);
               $this->verificarRepetidos();
             }
-
           }
         }
       }
@@ -58,7 +57,6 @@
         }
 
       }
-
   }
 
   ?>
