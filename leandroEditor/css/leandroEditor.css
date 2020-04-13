@@ -1,0 +1,102 @@
+.btn-leandroeditor {
+    background-color: black;
+    color: white;
+    border: 1px solid grey;
+    border-radius: 5px;
+}
+.btn-leandroeditor:hover {
+    background-color: #191919;
+    color: #d3d3d3;
+    border: 1.2px solid black;
+    border-radius: 5px;
+}
+.btn-leandroeditor-light{
+    background-color: #CCCCCC;
+    color: black;
+    border: 1px solid grey;
+    border-radius: 5px;
+}
+.btn-leandroeditor-light:hover{
+    background-color: #A9A9A9;
+    color: black;
+    border: 1.2px solid grey;
+    border-radius: 5px;
+}
+.btn-leandroeditor-danger{
+    background-color: #A40000;
+    color: black;
+    border: 1px solid grey;
+    border-radius: 5px;
+}
+.btn-leandroeditor-danger:hover{
+    background-color: red;
+    color: black;
+    border: 1.2px solid grey;
+    border-radius: 5px;
+}
+.btn-leandroeditor-warning{
+    background-color: #FF8000;
+    color: black;
+    border: 1px solid grey;
+    border-radius: 5px;
+}
+.btn-leandroeditor-warning:hover{
+    background-color: yellow;
+    color: black;
+    border: 1.2px solid grey;
+    border-radius: 5px;
+}
+.btn-leandroeditor-success{
+    background-color: #006400;
+    color: black;
+    border: 1px solid grey;
+    border-radius: 5px;
+}
+.btn-leandroeditor-success:hover{
+    background-color: green;
+    color: black;
+    border: 1.2px solid grey;
+    border-radius: 5px;
+}
+.le-form-control {
+    display: block;
+    width: 100%;
+    height: calc(1.5em + .75rem + 2px);
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #495057;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    border-radius: .25rem;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+.le-alert-danger {
+    color: #721c24;
+    background-color: #f8d7da;
+    border-color: #f5c6cb;
+}
+.le-flex {
+    display: -ms-flexbox!important;
+    display: flex!important;
+}
+.justify-content-center {
+    -ms-flex-pack: center!important;
+    justify-content: center!important;
+}
+.le-text-center {
+    text-align: center!important;
+}
+.le-cursor-hand {
+    cursor: pointer!important;
+}
+.destaque:hover {
+    color: #23415A;
+    text-decoration: underline;
+    font-weight: bold;
+}
+.le-justify-center {
+    float: center!important;
+}
